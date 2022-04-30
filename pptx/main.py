@@ -1,3 +1,4 @@
+import api_key
 import lyricsgenius as lg
 from pptx import Presentation
 from pptx.enum.text import PP_ALIGN
@@ -6,11 +7,11 @@ import platform
 import getpass
 import os
 
-client_access_token = "U3k1D2Vr1-sIamEfWoarvs1wYv2MporNMejpjGu4Vk_j6NjEVtnH4aTCZh9zMJ2f"
+
 artist_input = input("Specify artist:")
 artist_song = input("Specify song:")
 def get_lyrics():
-        genius = lg.Genius(client_access_token, skip_non_songs=True, excluded_terms=["(Remix)", "(Live)"], remove_section_headers=True)
+        genius = lg.Genius(api_key.client_access_token, skip_non_songs=True, excluded_terms=["(Remix)", "(Live)"], remove_section_headers=True)
         artist = genius.search_artist(artist_input, max_songs=0, sort="title")
         song = artist.song(artist_song)
         song_lyrics = song.lyrics
