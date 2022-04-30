@@ -1,5 +1,4 @@
-# Prevent api key from getting commited
-api_key.py
+
 
 # Mac stuff
 .DS_Store
