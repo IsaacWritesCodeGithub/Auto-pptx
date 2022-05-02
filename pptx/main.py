@@ -11,7 +11,7 @@ import os
 artist_input = input("Specify artist:")
 artist_song = input("Specify song:")
 def get_lyrics():
-        genius = lg.Genius(api_key.client_access_token, skip_non_songs=True, excluded_terms=["(Remix)", "(Live)"], remove_section_headers=True)
+        genius = lg.Genius(api_key.client_access_token, skip_non_songs=True,remove_section_headers=True)
         artist = genius.search_artist(artist_input, max_songs=0, sort="title")
         song = artist.song(artist_song)
         song_lyrics = song.lyrics
