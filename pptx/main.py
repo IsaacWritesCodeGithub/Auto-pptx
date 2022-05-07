@@ -18,7 +18,7 @@ def parse_arguments():
     artist_song = args.song
     return artist_input, artist_song
 
-
+# TODO: Update req
 def get_lyrics(artist_input, artist_song):
         genius = lg.Genius(api_key.client_access_token, skip_non_songs=True,remove_section_headers=True)
         artist = genius.search_artist(' '.join(artist_input), max_songs=0, sort="title")
