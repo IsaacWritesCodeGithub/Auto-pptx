@@ -1,53 +1,52 @@
-altgraph==0.17.2
-beautifulsoup4==4.11.1
-bleach==5.0.0
-bottle==0.12.19
-bottle-websocket==0.2.9
-bs4==0.0.1
-bump2version==1.0.1
-bumpversion==0.6.0
-certifi==2021.10.8
-charset-normalizer==2.0.12
-colored==1.4.3
-commonmark==0.9.1
-docutils==0.18.1
-Eel==0.12.4
-future==0.18.2
-gevent==21.12.0
-gevent-websocket==0.10.1
-Gooey==1.0.8.1
-google==3.0.0
-greenlet==1.1.2
-idna==3.3
-importlib-metadata==4.11.3
-keyring==23.5.0
-lxml==4.8.0
-lyricsgenius==3.0.1
-macholib==1.16
-numpy==1.22.3
-Pillow==9.1.0
-pkginfo==1.8.2
-psutil==5.9.0
-Pygments==2.12.0
-pygtrie==2.4.2
-pyinstaller==5.0.1
-pyinstaller-hooks-contrib==2022.4
-python-pptx==0.6.21
-readme-renderer==35.0
-requests==2.27.1
-requests-toolbelt==0.9.1
-rfc3986==2.0.0
-rich==12.3.0
-setup-py-upgrade==1.2.1
-six==1.16.0
-soupsieve==2.3.2.post1
-tk==0.1.0
-twine==4.0.0
-urllib3==1.26.9
-webencodings==0.5.1
-whichcraft==0.6.1
-wxPython==4.1.1
-XlsxWriter==3.0.3
-zipp==3.8.0
-zope.event==4.5.0
-zope.interface==5.4.0
+    altgraph==0.17.2
+    beautifulsoup4==4.11.1
+    bleach==5.0.0
+    bottle==0.12.19
+    bottle-websocket==0.2.9
+    bump2version==1.0.1
+    bumpversion==0.6.0
+    certifi==2021.10.8
+    charset-normalizer==2.0.12
+    colored==1.4.3
+    commonmark==0.9.1
+    docutils==0.18.1
+    Eel==0.12.4
+    future==0.18.2
+    gevent==21.12.0
+    gevent-websocket==0.10.1
+    Gooey==1.0.8.1
+    google==3.0.0
+    greenlet==1.1.2
+    idna==3.3
+    importlib-metadata==4.11.3
+    keyring==23.5.0
+    lxml==4.8.0
+    lyricsgenius==3.0.1
+    macholib==1.16
+    numpy==1.22.3
+    Pillow==9.1.0
+    pkginfo==1.8.2
+    psutil==5.9.0
+    Pygments==2.12.0
+    pygtrie==2.4.2
+    pyinstaller==5.0.1
+    pyinstaller-hooks-contrib==2022.4
+    python-pptx==0.6.21
+    readme-renderer==35.0
+    requests==2.27.1
+    requests-toolbelt==0.9.1
+    rfc3986==2.0.0
+    rich==12.3.0
+    setup-py-upgrade==1.2.1
+    six==1.16.0
+    soupsieve==2.3.2.post1
+    tk==0.1.0
+    twine==4.0.0
+    urllib3==1.26.9
+    webencodings==0.5.1
+    whichcraft==0.6.1
+    wxPython==4.1.1
+    XlsxWriter==3.0.3
+    zipp==3.8.0
+    zope.event==4.5.0
+    zope.interface==5.4.0
