@@ -5,14 +5,14 @@ from pptx.enum.text import PP_ALIGN
 from pptx.util import Pt, Cm
 import platform
 import getpass
-import os 
+import os
 from gooey import Gooey, GooeyParser
 
 @Gooey(footer_bg_color="#789CA4", sidebar_bg_color="#789CA4", body_bg_color="#789CA4", header_bg_color="#789CA4", program_name='Auto-pptx', program_description="A simple, intuitive powerpoint creator for all.")
 def parse_arguments():
     parser = GooeyParser()
-    parser.add_argument('-a', '--Artist', type=str, nargs='+', required=True, help='Specify what artist you want to search.')
-    parser.add_argument('-s', '--Song', type=str, nargs='+', required=True, help='Specify what song you want to search.')
+    parser.add_argument('-a', '--artist', type=str, nargs='+', required=True, help='Specify what artist you want to search.')
+    parser.add_argument('-s', '--song', type=str, nargs='+', required=True, help='Specify what song you want to search.')
     args = parser.parse_args()
     artist_input = args.artist
     artist_song = args.song
