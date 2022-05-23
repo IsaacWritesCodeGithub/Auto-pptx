@@ -10,7 +10,7 @@ import os
 from gooey import Gooey, GooeyParser
 
 # Mac colors: footer_bg_color="#789CA4", sidebar_bg_czolor="#789CA4", body_bg_color="#789CA4", header_bg_color="#789CA4"
-@Gooey(program_name='Auto-pptx', program_description="A simple, intuitive powerpoint creator for all.", footer_bg_color="#789CA4", sidebar_bg_czolor="#789CA4", body_bg_color="#789CA4", header_bg_color="#789CA4")
+@Gooey(program_name='Auto-pptx', program_description="A simple, intuitive powerpoint creator for all.")
 def parse_arguments():
     parser = GooeyParser()
     parser.add_argument('-a', '--Artist', type=str, nargs='+', required=True, help='Specify what artist you want to search.')
