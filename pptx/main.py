@@ -8,18 +8,22 @@ import getpass
 import os
 from gooey import Gooey, GooeyParser
 
-# Mac colors: footer_bg_color="#789CA4", sidebar_bg_color="#789CA4", body_bg_color="#789CA4", header_bg_color="#789CA4"
+# Mac colors: footer_bg_color="#789CA4", sidebar_bg_czolor="#789CA4", body_bg_color="#789CA4", header_bg_color="#789CA4"
 @Gooey(program_name='Auto-pptx', program_description="A simple, intuitive powerpoint creator for all.")
 def parse_arguments():
     parser = GooeyParser()
     parser.add_argument('-a', '--Artist', type=str, nargs='+', required=True, help='Specify what artist you want to search.')
     parser.add_argument('-s', '--Song', type=str, nargs='+', required=True, help='Specify what song you want to search.')
+    parser.add_argument('--Font', type=str, nargs='+', required=False, help="Specify the font you want")
+    parser.add_argument('--Font_Size', type=int, required=False, help="Specify the font size")
     args = parser.parse_args()
     artist_input = args.Artist
     artist_song = args.Song
-    return artist_input, artist_song
+    font = args.Font
+    font_size = args.Font_Size
+    return artist_input, artist_song, font, font_size
 
-def get_lyrics(artist_input, artist_song):
+def get_lyrics(artist_input, artist_song, font, font_size):
         genius = lg.Genius(api_key.client_access_token, skip_non_songs=True,remove_section_headers=True)
         artist = genius.search_artist(' '.join(artist_input), max_songs=0, sort="title")
         song = artist.song(' '.join(artist_song))
@@ -30,7 +34,7 @@ def get_lyrics(artist_input, artist_song):
         lyrics = [x for x in split_lyrics if x]
         return lyrics
 
-def make_pres(artist, song):
+def make_pres(artist, song, font, font_size):
     pres = Presentation()
     layout = pres.slide_layouts[6]
     left = Cm(3)
@@ -60,7 +64,12 @@ def make_pres(artist, song):
         tf.word_wrap = True
         p = tf.add_paragraph()
         p.text = i
-        p.font.size = Pt(60)
+        if font != None:
+            p.font.name = ' '.join(font)
+        if font_size == '':
+            p.font.size = Pt(60)
+        else:
+            p.font.size = Pt(font_size)
         if platform.system() == 'Windows':
             pres.save(f"C:/Users/{getpass.getuser()}/Desktop/{directory}/{' '.join(song)} by {' '.join(artist)}.pptx")
         elif platform.system() == 'Darwin':
