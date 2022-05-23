@@ -80,10 +80,11 @@ def make_pres(artist, song, font, font_size, background_color, font_color):
         p = tf.add_paragraph()
         p.text = i
         if background_color != None:
+            r, g, b = background_color
             background = slide.background
             fill = background.fill
             fill.solid()
-            fill.fore_color.rgb = RGBColor(100, 100, 100)
+            fill.fore_color.rgb = RGBColor(r, g, b)
         if font_color != None:
             r, g, b = font_color
             p.font.color.rgb = RGBColor(r, g, b)
