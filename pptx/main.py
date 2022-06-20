@@ -1,4 +1,3 @@
-import api_key
 import lyricsgenius as lg
 from pptx import Presentation
 from pptx.dml.color import RGBColor
@@ -39,7 +38,7 @@ def parse_arguments():
     return artist_input, artist_song, font, font_size, background_color, font_color
 
 def get_lyrics(artist_input, artist_song, font, font_size, background_color, font_color):
-        genius = lg.Genius(api_key.client_access_token, skip_non_songs=True,remove_section_headers=True)
+        genius = lg.Genius(os.getenv['client_access_token'], skip_non_songs=True,remove_section_headers=True)
         artist = genius.search_artist(' '.join(artist_input), max_songs=0, sort="title")
         song = artist.song(' '.join(artist_song))
         song_lyrics = song.lyrics
